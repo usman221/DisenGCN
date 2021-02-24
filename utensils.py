@@ -16,7 +16,7 @@ def load(file_path,dataset):
 
     paper_id = np.array(feature_labels_data[:,0], dtype=int)
     idx_map = {i:j for j,i in enumerate(paper_id)}
-    edges = np.genfromtxt("{}/{}/cora.cites".format(file_path,dataset),dtype=int)
+    edges = np.genfromtxt("{}/{}/word.cites".format(file_path,dataset),dtype=int)
     source_id = edges[:,0]
     target_id = edges[:,1]
     source_index = [idx_map[i] for i in source_id]
