@@ -5,7 +5,7 @@ from sklearn import preprocessing
 from sklearn.metrics import accuracy_score
 
 def load(file_path,dataset):
-    feature_labels_data = np.genfromtxt("{}/{}/content".format(file_path,dataset),dtype=np.dtype(str))
+    feature_labels_data = np.genfromtxt("{}/{}/content.txt".format(file_path,dataset),dtype=np.dtype(str))
     fetaures = np.array(feature_labels_data[:, 1:-1], dtype=np.float32)
     labels = np.array(feature_labels_data[:,-1], dtype=str).reshape(-1,1)
     encoder = preprocessing.OneHotEncoder(handle_unknown='ignore')
